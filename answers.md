@@ -43,13 +43,19 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 
 
 ## 1.11
-command: 
+command:sudo docker run -d -p 8081:8081 -e APP_PORT=8081 -e WS_BACK_URL=172.17.0.1 steph1101/tp2front 
+answer: You called at : 2018-11-13 14:17:27.144524 (dynamic)
+        On environment : dev (from env variable)
+        With path : Here is the root   (from URL path)
+        With front : bb2f22d65d66 (from real hostname of front service)
+        With back  : 964e2d54250e (from real hostname of back service)
 
 ## 2.1
-command: 
+command: docker-compose up 
 
 ## 2.6
-command: 
-command: 
+command: docker-compose up -d 
+command: docker-compose logs
 
-
+## 2.9
+command
